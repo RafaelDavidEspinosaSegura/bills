@@ -1,0 +1,11 @@
+.main-content
+{
+    display: flex;
+    min-height: calc(100ch - 100px);
+}
+
+.main
+{
+    flex: 1;
+    padding: 20px;
+}
