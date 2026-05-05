@@ -1,0 +1,31 @@
+<div class="modal">
+  <div class="modal-content">
+    <h3>{{ message }}</h3>
+
+    <form (ngSubmit)="addExpense()">
+      <label>Descripción:</label>
+      <input [(ngModel)]="description" name="description" required />
+
+      <label>Monto:</label>
+      <input type="number" [(ngModel)]="amount" name="amount" required />
+
+      <label>Fecha:</label>
+      <input type="date" [(ngModel)]="date" name="date" required />
+
+      <label>Categoría:</label>
+      <select [(ngModel)]="category" name="category">
+        <option [ngValue]="ExpenseCategory.Housing">Vivienda</option>
+        <option [ngValue]="ExpenseCategory.Food">Alimentación</option>
+        <option [ngValue]="ExpenseCategory.Entertainment">Entretenimiento</option>
+        <option [ngValue]="ExpenseCategory.Health">Salud</option>
+        <option [ngValue]="ExpenseCategory.Transport">Transporte</option>
+        <option [ngValue]="ExpenseCategory.Others">Otros</option>
+      </select>
+
+      <div class="modal-actions">
+        <button type="submit" class="btn-save">Guardar</button>
+        <button type="button" class="btn-cancel" (click)="close()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>

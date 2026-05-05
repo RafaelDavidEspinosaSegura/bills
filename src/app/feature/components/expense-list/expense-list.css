@@ -1,0 +1,51 @@
+.expense-list-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.expense-header h2 {
+  color: #4a148c;
+  margin-bottom: 5px;
+}
+
+.expense-header p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.btn-add {
+  background-color: #0097a7;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-add:hover {
+  background-color: #00796b;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expense-table th {
+  background-color: #4a148c;
+  color: white;
+  padding: 10px;
+}
+
+.expense-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.cat-housing { background-color: #e3f2fd; }
+.cat-food { background-color: #f1f8e9; }
+.cat-entertainment { background-color: #fff3e0; }
+.cat-health { background-color: #fce4ec; }
+.cat-transport { background-color: #ede7f6; }
+.cat-others { background-color: #fafafa; }
