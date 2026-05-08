@@ -3,6 +3,7 @@ import { NgFor, NgClass, DatePipe, DecimalPipe, NgIf } from '@angular/common';
 import { Expense, ExpenseCategory } from '../models/expenseModels';
 import { FormsModule } from '@angular/forms';
 import { ExpenseAdd } from '../expense-add/expense-add';
+import { ExpenseService } from '../../services/expenseService';
 
 @Component
 (
@@ -18,31 +19,13 @@ export class ExpenseList
  {
   showModal = false;
   modalMessage = 'Agrega un nuevo gasto a tu lista';
+  selecEdeExpense: Expense| null=null;
 
-  expensesList: Expense[] =
-   [
-    {
-      id: 1,
-      description: 'Alquiler de apartamento',
-      amount: 1200000,
-      date: new Date(),
-      category: ExpenseCategory.Housing
-    },
-    {
-      id: 2,
-      description: 'Compra de mercado',
-      amount: 250000,
-      date: new Date(),
-      category: ExpenseCategory.Food
-    },
-    {
-      id: 3,
-      description: 'Transporte público',
-      amount: 50000,
-      date: new Date(),
-      category: ExpenseCategory.Transport
-    }
-  ];
+  ExpensesList:Expense[]=[];
+  constructor(private expenseService:ExpenseService)
+  {
+    this.ExpensesList= this.expenseService. getExpensesList();
+  }
 
   openModal(): void
    {
@@ -51,8 +34,8 @@ export class ExpenseList
   onExpenseAdded(data: Omit<Expense, 'id'>): void
    {
     const
-     newId = Math.max(...this.expensesList.map(e => e.id), 0) + 1;
-    this.expensesList.push({ id: newId, ...data });
+     newId = Math.max(...this.ExpensesList.map(e => e.id), 0) + 1;
+    this.ExpensesList.push({ id: newId, ...data });
     this.showModal = false;
   }
 
@@ -68,7 +51,7 @@ export class ExpenseList
     return map[category] ?? 'cat-others';
   }
   deleteExpense(id: number): void {
-  this.expensesList = this.expensesList.filter(e => e.id !== id);
+  this.ExpensesList = this.ExpensesList.filter(e => e.id !== id);
 }
 
 }
