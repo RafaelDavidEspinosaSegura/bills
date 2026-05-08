@@ -67,4 +67,8 @@ export class ExpenseList
     };
     return map[category] ?? 'cat-others';
   }
+  deleteExpense(id: number): void {
+  this.expensesList = this.expensesList.filter(e => e.id !== id);
+}
+
 }
