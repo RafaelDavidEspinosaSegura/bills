@@ -43,9 +43,9 @@
   padding: 8px;
 }
 
-.cat-housing { background-color: #e3f2fd; }
-.cat-food { background-color: #f1f8e9; }
-.cat-entertainment { background-color: #fff3e0; }
-.cat-health { background-color: #fce4ec; }
-.cat-transport { background-color: #ede7f6; }
-.cat-others { background-color: #fafafa; }
+.cat-housing { background-color: #43b37b; }
+.cat-food { background-color: #1660c1; }
+.cat-entertainment { background-color: #43b37b; }
+.cat-health { background-color: #1660c1; }
+.cat-transport { background-color: #43b37b; }
+.cat-others { background-color: #1660c1; }

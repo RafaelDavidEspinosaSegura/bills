@@ -3,18 +3,23 @@ import { NgFor, NgClass, DatePipe, DecimalPipe } from '@angular/common';
 import { Expense, ExpenseCategory } from '../models/expenseModels';
 import { ExpenseAdd } from '../expense-add/expense-add';
 
-@Component({
+@Component
+(
+  {
   selector: 'app-expense-list',
   standalone: true,
   imports: [NgFor, NgClass, DatePipe, DecimalPipe, ExpenseAdd],
   templateUrl: './expense-list.html',
   styleUrls: ['./expense-list.css']
 })
-export class ExpenseList {
+
+export class ExpenseList
+ {
   showModal = false;
   modalMessage = 'Agrega un nuevo gasto a tu lista';
 
-  expensesList: Expense[] = [
+  expensesList: Expense[] =
+   [
     {
       id: 1,
       description: 'Alquiler de apartamento',
@@ -38,13 +43,14 @@ export class ExpenseList {
     }
   ];
 
-  openModal(): void {
+  openModal(): void
+   {
     this.showModal = true;
   }
-
-  // Agregar gasto desde el hijo
-  onExpenseAdded(data: Omit<Expense, 'id'>): void {
-    const newId = Math.max(...this.expensesList.map(e => e.id), 0) + 1;
+  onExpenseAdded(data: Omit<Expense, 'id'>): void
+   {
+    const
+     newId = Math.max(...this.expensesList.map(e => e.id), 0) + 1;
     this.expensesList.push({ id: newId, ...data });
     this.showModal = false;
   }
