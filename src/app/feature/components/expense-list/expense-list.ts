@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NgFor, NgClass, DatePipe, DecimalPipe } from '@angular/common';
+import { NgFor, NgClass, DatePipe, DecimalPipe, NgIf } from '@angular/common';
 import { Expense, ExpenseCategory } from '../models/expenseModels';
+import { FormsModule } from '@angular/forms';
 import { ExpenseAdd } from '../expense-add/expense-add';
 
 @Component
@@ -8,7 +9,7 @@ import { ExpenseAdd } from '../expense-add/expense-add';
   {
   selector: 'app-expense-list',
   standalone: true,
-  imports: [NgFor, NgClass, DatePipe, DecimalPipe, ExpenseAdd],
+  imports: [NgFor, NgClass, DatePipe, DecimalPipe, ExpenseAdd, FormsModule, NgIf, ],
   templateUrl: './expense-list.html',
   styleUrls: ['./expense-list.css']
 })

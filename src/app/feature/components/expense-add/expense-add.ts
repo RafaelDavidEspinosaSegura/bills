@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Expense, ExpenseCategory } from '../models/expenseModels';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-expense-add',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './expense-add.html',
   styleUrls: ['./expense-add.css']
 })
