@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Expense, ExpenseCategory } from '../../models/expenseModels';
+import { Expense, ExpenseCategory } from '../models/expenseModels';
 
 @Component({
   selector: 'app-expense-add',

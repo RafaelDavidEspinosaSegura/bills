@@ -1,17 +1,20 @@
-.footer {
-  background: #007BFF;   
+.footer 
+{
+  background: #1f73c7f9;   
   text-align: center;
   padding: 15px;
   margin-top: 20px;     
 }
 
-.footer nav a {
-  color: #f0f4ff;      
+.footer nav a 
+{
+  color: #ffffff;      
   text-decoration: none;
   margin: 0 5px;
 }
 
-.footer nav a:hover {
+.footer nav a:hover 
+{
   text-decoration: underline;
-  color: #0da582;       
+  color: #ffffff;       
 }

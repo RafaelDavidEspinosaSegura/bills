@@ -1,38 +1,45 @@
-.header {
-    background: #24eecc;   
+.header 
+{
+    background: #0cafa7;   
     padding: 20px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
+.logo 
+{
    display: flex;
    align-items: center;
 }
 
-.logo .icon {
+.logo .icon 
+{
     font-size: 24px;
     margin-right: 10px;
 }
 
-.logo h1 {
+.logo h1 
+{
     font-size: 24px;
     margin: 0;
 }
 
-.nav a {
-    color: #5e5ade;       
+.nav a
+ {
+    color: #ffffff;       
     margin-left: 1rem; 
     text-decoration: none; 
     font-weight: 500;
 }
 
-.nav a:hover {
+.nav a:hover 
+{
     text-decoration: underline;
-    color: #3f076094;
+    color: #000000;
 }
 
-.nav a.active {
-   border-bottom: 2px solid #0da582; 
+.nav a.active
+ {
+   border-bottom: 2px solid #c5d02a; 
 }

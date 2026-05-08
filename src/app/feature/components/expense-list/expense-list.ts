@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgFor, NgClass, DatePipe, DecimalPipe } from '@angular/common';
-import { Expense, ExpenseCategory } from '../../models/expenseModels';
+import { Expense, ExpenseCategory } from '../models/expenseModels';
 import { ExpenseAdd } from '../expense-add/expense-add';
 
 @Component({
